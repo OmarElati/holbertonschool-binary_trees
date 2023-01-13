@@ -1,10 +1,12 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_is_perfect - Function checks if a binary tree is perfect
- * @tree: pointer to the root node of the tree to check
+ * binary_tree_is_perfect - Function that finds the sibling of a node
+ * @tree: pointer to the node to find the sibling
  *
- * Return: If tree is NULL, your function must return 0
+ * Return: pointer to the sibling node
+ *         If node is NULL or the parent is NULL, return NULL
+ *         If node has no sibling, return NULL
 */
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
@@ -12,9 +14,17 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 		return (0);
 	if (!tree->left && !tree->right)
 		return (1);
-	if (binary_tree_is_full(tree))
+	if (tree->left && tree->right)
+	{
 		if (binary_tree_height(tree->left) == binary_tree_height(tree->right))
-			return (1);
+		{
+			if (binary_tree_is_perfect(tree->left))
+			{
+				if (binary_tree_is_perfect(tree->right))
+					return (1);
+			}
+		}
+	}
 
 	return (0);
 }
@@ -35,21 +45,4 @@ size_t binary_tree_height(const binary_tree_t *tree)
 	right_height = binary_tree_height(tree->right);
 
 	return ((left_height > right_height ? left_height : right_height) + 1);
-}
-
-/**
- * binary_tree_is_full - Function checks if a binary tree is full
- * @tree: pointer to the root node of the tree to check
- *
- * Return: If tree is NULL, your function must return 0
-*/
-int binary_tree_is_full(const binary_tree_t *tree)
-{
-	if (!tree)
-		return (0);
-	if (!tree->left && !tree->right)
-		return (1);
-	else
-		return (binary_tree_is_full(tree->left) && binary_tree_is_full(tree->right));
-	return (0);
 }
