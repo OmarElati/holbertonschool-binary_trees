@@ -40,13 +40,13 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first
 */
 int is_descendant(const binary_tree_t *first, const binary_tree_t *second)
 {
-	int des_left, des_right;
+	int descendant_left, descendant_right;
 
 	if (!first || !second)
 		return (0);
 	if (first == second)
 		return (1);
-	des_left = is_descendant(first->left, second);
-	des_right = is_descendant(first->right, second);
+	descendant_left = is_descendant(first->left, second);
+	descendant_right = is_descendant(first->right, second);
 	return (des_left || des_right);
 }
