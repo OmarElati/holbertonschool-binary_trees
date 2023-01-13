@@ -48,5 +48,5 @@ int is_descendant(const binary_tree_t *first, const binary_tree_t *second)
 		return (1);
 	descendant_left = is_descendant(first->left, second);
 	descendant_right = is_descendant(first->right, second);
-	return (des_left || des_right);
+	return (descendant_left || descendant_right);
 }
