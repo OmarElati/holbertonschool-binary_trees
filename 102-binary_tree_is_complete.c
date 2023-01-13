@@ -8,16 +8,17 @@
 */
 int binary_tree_is_complete(const binary_tree_t *tree)
 {
-	int left_height, right_height;
+	int left_height, right_height, left_complete, right_complete;
 
 	if (!tree)
 		return (0);
 	left_height = binary_tree_height(tree->left);
 	right_height = binary_tree_height(tree->right);
+	left_complete = binary_tree_is_complete(tree->left);
+	right_complete = binary_tree_is_complete(tree->right);
 
 	if (left_height == right_height)
-		return (binary_tree_is_complete(tree->left) 
-		&& binary_tree_is_complete(tree->right));
+		return (left_complete && right_complete);
 
 	else if (left_height - 1 == right_height)
 	{
