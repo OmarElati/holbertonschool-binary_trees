@@ -13,7 +13,7 @@ bst_t *bst_search(const bst_t *tree, int value)
     if(tree == NULL)
         return (NULL);
 
-    if(tree->value = value)
+    if(tree->value == value)
         return ((bst_t *) tree);
 
     if(value < tree->value)
