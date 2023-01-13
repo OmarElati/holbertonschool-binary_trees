@@ -1,7 +1,7 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_is_bst - function checks if binary tree valid Binary Search 
+ * binary_tree_is_bst - function checks if binary tree valid Binary Search
  * @tree: pointer to the root node of the tree to check
  *
  * Return: If tree is NULL, return 0
