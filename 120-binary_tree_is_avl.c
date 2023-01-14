@@ -39,7 +39,7 @@ int max(int a, int b)
  * height - Function calculates the height of the subtree
  * @tree: pointer to the root node of the tree to check
  *
- * Return: 
+ * Return: the maximum of the two heights
 */
 int height(const binary_tree_t *tree)
 {
