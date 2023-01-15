@@ -1,5 +1,7 @@
 # holbertonschool-binary_trees
 
+![Holberton School](index.png)
+
 Welcome to the binary trees repository for Holberton School! This repository contains projects and exercises that cover the fundamental concepts of binary trees, such as traversals, insertion, and deletion.
 
 ## Binary Tree
