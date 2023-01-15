@@ -1,7 +1,5 @@
 # holbertonschool-binary_trees
 
-![Holberton School](index.png)
-
 Welcome to the binary trees repository for Holberton School! This repository contains projects and exercises that cover the fundamental concepts of binary trees, such as traversals, insertion, and deletion.
 
 ## Binary Tree
@@ -90,3 +88,6 @@ typedef struct binary_tree_s avl_t;
 ```bash
 typedef struct binary_tree_s heap_t;
 ```
+
+
+[def]: index.png
