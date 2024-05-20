@@ -525,6 +525,7 @@ Write a function that builds an AVL tree from an array
 File(s): [`124-sorted_array_to_avl.c`](./124-sorted_array_to_avl.c) [`0-binary_tree_node.c`](./0-binary_tree_node.c)\
 Compiled: `gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 124-main.c 124-sorted_array_to_avl.c 0-binary_tree_node.c -o 124-avl_sorted`
 
+
 ### :white_large_square: 35. Big O #AVL Tree
 What are the average time complexities of those operations on an AVL Tree (one answer per line):
 
